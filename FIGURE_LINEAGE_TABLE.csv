@@ -1,0 +1,8 @@
+论文图号,脚本,输入结果,输出目录,提交版本,项目内状态/备注
+Fig4-1,Current/Evaluation/generate_chapter4_thesis_figures.py::figure_fig4_1,Artifacts/Figures_3D_Validation/G_CaseA_Centerline_Data.npz,figures/chapter4/,5f410b3,生成脚本在项目内；训练脚本在项目内；当前生成链不直接读取 Results_3D_CaseA/model.pkl
+Fig4-2,Current/Evaluation/generate_chapter4_thesis_figures.py::figure_fig4_2,Artifacts/Figures_3D_Validation/G_CaseA_2D_Data.npz,figures/chapter4/,5f410b3,生成脚本在项目内；训练脚本在项目内；当前生成链不直接读取 Results_3D_CaseA/model.pkl
+Fig4-3,Current/Evaluation/generate_chapter4_thesis_figures.py::figure_fig4_3,../Results_3D_CaseB/model.pkl + Artifacts/MC3D_Raw_Benchmarks/FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M.npy,figures/chapter4/,5f410b3,生成脚本与训练脚本在项目内；训练输出不在项目内，只在父目录存在
+Fig4-4,Current/Evaluation/generate_chapter4_thesis_figures.py::figure_fig4_4,../Results_3D_CaseB/model.pkl + Artifacts/MC3D_Raw_Benchmarks/FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M.npy,figures/chapter4/,5f410b3,Fig4-4 输出 npz 未写回 fmc_source；按缓存资源解析逻辑与 Fig4-3 使用同一 Case B FMC 输入
+Fig4-5,Current/Evaluation/generate_chapter4_thesis_figures.py::figure_fig4_5,../Results_3D_CaseC/model.pkl + Artifacts/MC3D_Raw_Benchmarks/FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M.npy,figures/chapter4/,5f410b3,生成脚本与训练脚本在项目内；训练输出不在项目内，只在父目录存在
+Fig4-6,Current/Evaluation/generate_chapter4_thesis_figures.py::figure_fig4_6,../Results_3D_CaseC/model.pkl + Artifacts/MC3D_Raw_Benchmarks/FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M.npy,figures/chapter4/,5f410b3,Fig4-6 输出 npz 未写回 fmc_source；按缓存资源解析逻辑与 Fig4-5 使用同一 Case C FMC 输入
+Fig4-7,Current/Evaluation/generate_chapter4_thesis_figures.py::figure_fig4_7,../Results_3D_CaseC/model.pkl,figures/chapter4/,5f410b3,图函数本身只用 Case C 模型；但当前 run() 调度仍会先解析 Case C FMC，属于间接运行前置依赖
