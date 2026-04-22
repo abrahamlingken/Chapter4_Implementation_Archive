@@ -25,23 +25,15 @@ from scipy.special import roots_legendre
 
 SCRIPT_PATH = Path(__file__).resolve()
 EVAL_DIR = SCRIPT_PATH.parent
-CHAPTER_ROOT = EVAL_DIR.parent
-REPO_ROOT = CHAPTER_ROOT.parent
+CURRENT_ROOT = EVAL_DIR.parent
+ARCHIVE_ROOT = CURRENT_ROOT.parent
 
 for extra_path in (
-    CHAPTER_ROOT,
-    CHAPTER_ROOT / "Core",
-    CHAPTER_ROOT / "Models",
-    CHAPTER_ROOT / "EquationModels",
-    REPO_ROOT,
-    REPO_ROOT.parent,
-    REPO_ROOT.parent / "Core",
-    REPO_ROOT.parent / "Models",
-    REPO_ROOT.parent / "EquationModels",
-    REPO_ROOT.parent / "Chapter4_3D_SteadyState",
-    REPO_ROOT.parent / "Chapter4_3D_SteadyState" / "Core",
-    REPO_ROOT.parent / "Chapter4_3D_SteadyState" / "Models",
-    REPO_ROOT.parent / "Chapter4_3D_SteadyState" / "EquationModels",
+    ARCHIVE_ROOT,
+    ARCHIVE_ROOT / "Archive_Compat_Code",
+    CURRENT_ROOT,
+    CURRENT_ROOT / "Models",
+    CURRENT_ROOT / "EquationModels",
 ):
     extra_path_str = str(extra_path)
     if extra_path_str not in sys.path:
@@ -400,7 +392,7 @@ def resolve_outdir(outdir: str | Path) -> Path:
     """Resolve the output directory relative to the repository root."""
     outdir_path = Path(outdir)
     if not outdir_path.is_absolute():
-        outdir_path = REPO_ROOT / outdir_path
+        outdir_path = ARCHIVE_ROOT / outdir_path
     outdir_path.mkdir(parents=True, exist_ok=True)
     return outdir_path
 
@@ -438,8 +430,7 @@ def find_existing_path(candidates: list[Path], label: str) -> Path:
 def case_a_archive_candidates(filename: str) -> list[Path]:
     """Candidate validated Case A archive data files bundled with this archive."""
     return [
-        REPO_ROOT / "Artifacts" / "Figures_3D_Validation" / filename,
-        CHAPTER_ROOT / "Artifacts" / "Figures_3D_Validation" / filename,
+        ARCHIVE_ROOT / "Artifacts" / "Figures_3D_Validation" / filename,
     ]
 
 
@@ -481,10 +472,8 @@ def model_candidates(case_key: str) -> list[Path]:
     """Candidate model locations for a case."""
     folder = CASE_METADATA[case_key]["folder"]
     return [
-        REPO_ROOT.parent / folder / "model.pkl",
-        REPO_ROOT / folder / "model.pkl",
-        CHAPTER_ROOT / folder / "model.pkl",
-        CHAPTER_ROOT / "Results" / folder / "model.pkl",
+        ARCHIVE_ROOT / folder / "model.pkl",
+        ARCHIVE_ROOT / "Results" / folder / "model.pkl",
     ]
 
 
@@ -492,10 +481,8 @@ def history_candidates(case_key: str) -> list[Path]:
     """Candidate training-history locations for a case."""
     folder = CASE_METADATA[case_key]["folder"]
     return [
-        REPO_ROOT.parent / folder / "training_history.json",
-        REPO_ROOT / folder / "training_history.json",
-        CHAPTER_ROOT / folder / "training_history.json",
-        CHAPTER_ROOT / "Results" / folder / "training_history.json",
+        ARCHIVE_ROOT / folder / "training_history.json",
+        ARCHIVE_ROOT / "Results" / folder / "training_history.json",
     ]
 
 
@@ -505,7 +492,7 @@ def fmc_candidates(case_key: str) -> list[Path]:
         raise ValueError("FMC candidates are only defined for cases B and C.")
     candidates: list[Path] = []
     rqmc_candidates = sorted(
-        (REPO_ROOT / "Artifacts" / "MC3D_Raw_Benchmarks").glob(
+        (ARCHIVE_ROOT / "Artifacts" / "MC3D_Raw_Benchmarks").glob(
             f"FMC_G_3D_Case{case_key}_FIXED_RQMCAgg*.npy"
         )
     )
@@ -519,13 +506,9 @@ def fmc_candidates(case_key: str) -> list[Path]:
     for stem in stems:
         candidates.extend(
             [
-                REPO_ROOT / "Artifacts" / "MC3D_Raw_Benchmarks" / stem,
-                REPO_ROOT.parent / "Solvers" / "MC" / "MC3D_Results" / stem,
-                REPO_ROOT / "Solvers" / "MC" / "MC3D_Results" / stem,
-                CHAPTER_ROOT / "Solvers" / "MC" / "MC3D_Results" / stem,
-                CHAPTER_ROOT / "MC3D_Results" / stem,
-                REPO_ROOT.parent / stem,
-                REPO_ROOT / stem,
+                ARCHIVE_ROOT / "Artifacts" / "MC3D_Raw_Benchmarks" / stem,
+                ARCHIVE_ROOT / "MC3D_Results" / stem,
+                ARCHIVE_ROOT / stem,
             ]
         )
     return candidates
@@ -1368,8 +1351,8 @@ def run() -> int:
     print("=" * 84)
     print("Chapter 4 Thesis Figure Generator")
     print("=" * 84)
-    print(f"Chapter root : {CHAPTER_ROOT}")
-    print(f"Repo root    : {REPO_ROOT}")
+    print(f"Current root : {CURRENT_ROOT}")
+    print(f"Archive root : {ARCHIVE_ROOT}")
     print(f"Output dir   : {outdir}")
     print(f"Device       : {device}")
     print(f"Grid nx      : {args.nx}")

@@ -1,0 +1,522 @@
+{
+  "generated_at": "2026-04-22T20:40:30",
+  "chapter": "Chapter 4",
+  "output_directory": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check",
+  "figures": [
+    {
+      "figure": "Fig4-1",
+      "status": "SUCCESS",
+      "generated_at": "2026-04-22T20:39:38",
+      "elapsed_s": 0.62,
+      "outputs": {
+        "png": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-1_G_centerline_absorption.png",
+        "pdf": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-1_G_centerline_absorption.pdf",
+        "data": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-1_G_centerline_absorption_data.npz"
+      },
+      "metrics": {
+        "max_abs_error": 0.017338460574848336,
+        "mean_abs_error": 0.0019084443219600429,
+        "max_rel_error": 0.1944765768979852,
+        "data": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-1_G_centerline_absorption_data.npz"
+      },
+      "error": "",
+      "case_parameters": {
+        "A": {
+          "kappa": 5.0,
+          "sigma_s": 0.0,
+          "g": 0.0,
+          "name": "Case 3D-A"
+        }
+      },
+      "grid": {
+        "nx": 50,
+        "nx_3d": 36,
+        "coordinates": "cell-centered"
+      },
+      "dependencies": {
+        "A": {
+          "model_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results_3D_CaseA\\model.pkl",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results\\Results_3D_CaseA\\model.pkl"
+          ],
+          "history_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results_3D_CaseA\\training_history.json",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results\\Results_3D_CaseA\\training_history.json"
+          ],
+          "fmc_candidates": []
+        }
+      }
+    },
+    {
+      "figure": "Fig4-2",
+      "status": "SUCCESS",
+      "generated_at": "2026-04-22T20:39:39",
+      "elapsed_s": 0.83,
+      "outputs": {
+        "png": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-2_G_plane_absorption.png",
+        "pdf": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-2_G_plane_absorption.pdf",
+        "data": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-2_G_plane_absorption_data.npz"
+      },
+      "metrics": {
+        "main_min": -0.0006986802909523249,
+        "main_max": 0.9118521480512767,
+        "max_abs_error": 0.01554515647412813,
+        "data": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-2_G_plane_absorption_data.npz"
+      },
+      "error": "",
+      "case_parameters": {
+        "A": {
+          "kappa": 5.0,
+          "sigma_s": 0.0,
+          "g": 0.0,
+          "name": "Case 3D-A"
+        }
+      },
+      "grid": {
+        "nx": 50,
+        "nx_3d": 36,
+        "coordinates": "cell-centered"
+      },
+      "dependencies": {
+        "A": {
+          "model_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results_3D_CaseA\\model.pkl",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results\\Results_3D_CaseA\\model.pkl"
+          ],
+          "history_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results_3D_CaseA\\training_history.json",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results\\Results_3D_CaseA\\training_history.json"
+          ],
+          "fmc_candidates": []
+        }
+      }
+    },
+    {
+      "figure": "Fig4-3",
+      "status": "SUCCESS",
+      "generated_at": "2026-04-22T20:39:39",
+      "elapsed_s": 0.73,
+      "outputs": {
+        "png": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-3_G_centerline_isotropic.png",
+        "pdf": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-3_G_centerline_isotropic.pdf",
+        "data": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-3_G_centerline_isotropic_data.npz"
+      },
+      "metrics": {
+        "l2_rel_percent": 3.6842497446762197,
+        "max_abs_error": 0.06215223286101146,
+        "data": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-3_G_centerline_isotropic_data.npz"
+      },
+      "error": "",
+      "case_parameters": {
+        "B": {
+          "kappa": 0.5,
+          "sigma_s": 4.5,
+          "g": 0.0,
+          "name": "Case 3D-B"
+        }
+      },
+      "grid": {
+        "nx": 50,
+        "nx_3d": 36,
+        "coordinates": "cell-centered"
+      },
+      "dependencies": {
+        "B": {
+          "model_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results_3D_CaseB\\model.pkl",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results\\Results_3D_CaseB\\model.pkl"
+          ],
+          "history_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results_3D_CaseB\\training_history.json",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results\\Results_3D_CaseB\\training_history.json"
+          ],
+          "fmc_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr01.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr02.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr03.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr04.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr05.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr06.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr07.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr08.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr09.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr10.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr11.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr12.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr13.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr14.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr15.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr16.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_std.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr01.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr02.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr03.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr04.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr05.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr06.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr07.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr08.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_std.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseB_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseB_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseB_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseB_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseB_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseB_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseB.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseB.npy"
+          ]
+        }
+      }
+    },
+    {
+      "figure": "Fig4-4",
+      "status": "SUCCESS",
+      "generated_at": "2026-04-22T20:39:50",
+      "elapsed_s": 10.45,
+      "outputs": {
+        "png": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-4_G_plane_isotropic.png",
+        "pdf": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-4_G_plane_isotropic.pdf",
+        "data": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-4_G_plane_isotropic_data.npz"
+      },
+      "metrics": {
+        "main_min": 0.003030379031163951,
+        "main_max": 1.5727417667706807,
+        "max_abs_error": 0.03867719847904566,
+        "l2_rel_percent": 2.4959566165866436,
+        "slab_planes": 6,
+        "data": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-4_G_plane_isotropic_data.npz"
+      },
+      "error": "",
+      "case_parameters": {
+        "B": {
+          "kappa": 0.5,
+          "sigma_s": 4.5,
+          "g": 0.0,
+          "name": "Case 3D-B"
+        }
+      },
+      "grid": {
+        "nx": 50,
+        "nx_3d": 36,
+        "coordinates": "cell-centered"
+      },
+      "dependencies": {
+        "B": {
+          "model_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results_3D_CaseB\\model.pkl",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results\\Results_3D_CaseB\\model.pkl"
+          ],
+          "history_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results_3D_CaseB\\training_history.json",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results\\Results_3D_CaseB\\training_history.json"
+          ],
+          "fmc_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr01.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr02.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr03.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr04.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr05.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr06.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr07.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr08.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr09.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr10.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr11.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr12.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr13.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr14.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr15.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_scr16.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg16x16M_std.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr01.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr02.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr03.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr04.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr05.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr06.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr07.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_scr08.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_RQMCAgg8x16M_std.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseB_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseB_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseB_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseB_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseB_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseB_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseB.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseB.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseB.npy"
+          ]
+        }
+      }
+    },
+    {
+      "figure": "Fig4-5",
+      "status": "SUCCESS",
+      "generated_at": "2026-04-22T20:39:50",
+      "elapsed_s": 0.49,
+      "outputs": {
+        "png": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-5_G_centerline_forward.png",
+        "pdf": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-5_G_centerline_forward.pdf",
+        "data": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-5_G_centerline_forward_data.npz"
+      },
+      "metrics": {
+        "l2_rel_percent": 1.5923429148122177,
+        "tail_mean_ratio": 0.9071934968669786,
+        "data": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-5_G_centerline_forward_data.npz"
+      },
+      "error": "",
+      "case_parameters": {
+        "C": {
+          "kappa": 0.5,
+          "sigma_s": 4.5,
+          "g": 0.8,
+          "name": "Case 3D-C"
+        }
+      },
+      "grid": {
+        "nx": 50,
+        "nx_3d": 36,
+        "coordinates": "cell-centered"
+      },
+      "dependencies": {
+        "C": {
+          "model_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results_3D_CaseC\\model.pkl",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results\\Results_3D_CaseC\\model.pkl"
+          ],
+          "history_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results_3D_CaseC\\training_history.json",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results\\Results_3D_CaseC\\training_history.json"
+          ],
+          "fmc_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr01.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr02.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr03.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr04.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr05.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr06.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr07.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr08.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr09.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr10.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr11.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr12.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr13.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr14.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr15.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr16.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_std.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr01.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr02.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr03.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr04.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr05.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr06.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr07.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr08.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_std.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseC_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseC_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseC_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseC_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseC_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseC_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseC.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseC.npy"
+          ]
+        }
+      }
+    },
+    {
+      "figure": "Fig4-6",
+      "status": "SUCCESS",
+      "generated_at": "2026-04-22T20:40:00",
+      "elapsed_s": 9.93,
+      "outputs": {
+        "png": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-6_G_plane_forward.png",
+        "pdf": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-6_G_plane_forward.pdf",
+        "data": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-6_G_plane_forward_data.npz"
+      },
+      "metrics": {
+        "main_min": 0.005472837636868159,
+        "main_max": 1.1858336839774133,
+        "l2_rel_percent": 5.958794029085269,
+        "slab_planes": 6,
+        "data": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-6_G_plane_forward_data.npz"
+      },
+      "error": "",
+      "case_parameters": {
+        "C": {
+          "kappa": 0.5,
+          "sigma_s": 4.5,
+          "g": 0.8,
+          "name": "Case 3D-C"
+        }
+      },
+      "grid": {
+        "nx": 50,
+        "nx_3d": 36,
+        "coordinates": "cell-centered"
+      },
+      "dependencies": {
+        "C": {
+          "model_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results_3D_CaseC\\model.pkl",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results\\Results_3D_CaseC\\model.pkl"
+          ],
+          "history_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results_3D_CaseC\\training_history.json",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results\\Results_3D_CaseC\\training_history.json"
+          ],
+          "fmc_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr01.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr02.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr03.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr04.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr05.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr06.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr07.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr08.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr09.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr10.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr11.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr12.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr13.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr14.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr15.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr16.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_std.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr01.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr02.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr03.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr04.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr05.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr06.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr07.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr08.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_std.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseC_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseC_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseC_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseC_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseC_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseC_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseC.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseC.npy"
+          ]
+        }
+      }
+    },
+    {
+      "figure": "Fig4-7",
+      "status": "SUCCESS",
+      "generated_at": "2026-04-22T20:40:30",
+      "elapsed_s": 29.76,
+      "outputs": {
+        "png": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-7_G_3D_visualization.png",
+        "pdf": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-7_G_3D_visualization.pdf",
+        "vtk": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-7_G_3D_visualization.vtk",
+        "data": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-7_G_3D_visualization_data.npz"
+      },
+      "metrics": {
+        "threshold_percentile": 70.0,
+        "threshold_value": 0.037477470934391,
+        "points_rendered": 13997,
+        "data": "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\figures\\chapter4_verify_check\\Fig4-7_G_3D_visualization_data.npz"
+      },
+      "error": "",
+      "case_parameters": {
+        "C": {
+          "kappa": 0.5,
+          "sigma_s": 4.5,
+          "g": 0.8,
+          "name": "Case 3D-C"
+        }
+      },
+      "grid": {
+        "nx": 50,
+        "nx_3d": 36,
+        "coordinates": "cell-centered"
+      },
+      "dependencies": {
+        "C": {
+          "model_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results_3D_CaseC\\model.pkl",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results\\Results_3D_CaseC\\model.pkl"
+          ],
+          "history_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results_3D_CaseC\\training_history.json",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Results\\Results_3D_CaseC\\training_history.json"
+          ],
+          "fmc_candidates": [
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr01.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr02.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr03.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr04.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr05.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr06.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr07.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr08.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr09.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr10.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr11.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr12.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr13.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr14.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr15.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_scr16.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg16x16M_std.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr01.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr02.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr03.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr04.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr05.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr06.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr07.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_scr08.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_RQMCAgg8x16M_std.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseC_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseC_FIXED_HighStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseC_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseC_FIXED_UltraStats.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseC_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseC_FIXED.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\Artifacts\\MC3D_Raw_Benchmarks\\FMC_G_3D_CaseC.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\MC3D_Results\\FMC_G_3D_CaseC.npy",
+            "C:\\Users\\abrahamlingken\\Desktop\\硕士论文\\热辐射\\RadiativeTransportPinns\\Chapter4_Implementation_Archive\\FMC_G_3D_CaseC.npy"
+          ]
+        }
+      }
+    }
+  ]
+}

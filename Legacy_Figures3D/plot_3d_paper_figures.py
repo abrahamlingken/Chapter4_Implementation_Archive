@@ -11,6 +11,7 @@ plot_3d_paper_figures.py - 3D RTE 顶刊论文绘图脚本 (OOP版本)
 import os
 import sys
 import json
+from pathlib import Path
 import numpy as np
 import torch
 import matplotlib
@@ -27,15 +28,22 @@ rcParams['axes.labelsize'] = 12
 rcParams['axes.titlesize'] = 13
 rcParams['legend.fontsize'] = 10
 
-# 添加项目路径
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-if PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, PROJECT_ROOT)
+# 添加归档内项目路径
+SCRIPT_PATH = Path(__file__).resolve()
+LEGACY_DIR = SCRIPT_PATH.parent
+ARCHIVE_ROOT = LEGACY_DIR.parent
+CURRENT_ROOT = ARCHIVE_ROOT / 'Current'
 
-# 添加 Core 目录（用于 torch.load 找到 ModelClassTorch2）
-CORE_PATH = os.path.join(PROJECT_ROOT, 'Core')
-if CORE_PATH not in sys.path:
-    sys.path.insert(0, CORE_PATH)
+for extra_path in (
+    ARCHIVE_ROOT,
+    ARCHIVE_ROOT / 'Archive_Compat_Code',
+    CURRENT_ROOT,
+    CURRENT_ROOT / 'Models',
+    CURRENT_ROOT / 'EquationModels',
+):
+    extra_path_str = str(extra_path)
+    if extra_path_str not in sys.path:
+        sys.path.insert(0, extra_path_str)
 
 from EquationModels import RadTrans3D_Complex as Ec
 from ModelClassTorch2 import Pinns  # 确保加载时能找到类
@@ -53,9 +61,9 @@ def load_model_and_compute_G(case_folder, x_tensor, y_tensor, z_tensor, engine):
     Returns:
         G: 入射辐射 numpy 数组
     """
-    model_path = os.path.join(case_folder, 'model.pkl')
+    model_path = Path(case_folder) / 'model.pkl'
     
-    if not os.path.exists(model_path):
+    if not model_path.exists():
         print(f"  [Warning] Model not found: {model_path}")
         return None
     
@@ -80,19 +88,19 @@ def main():
     # 案例配置
     cases = {
         'Case 3D-A (Pure Absorption)': {
-            'folder': 'Results_3D_CaseA',
+            'folder': ARCHIVE_ROOT / 'Results_3D_CaseA',
             'color': 'blue',
             'linestyle': '-',
             'marker': 'o'
         },
         'Case 3D-B (Isotropic)': {
-            'folder': 'Results_3D_CaseB',
+            'folder': ARCHIVE_ROOT / 'Results_3D_CaseB',
             'color': 'red',
             'linestyle': '--',
             'marker': 's'
         },
         'Case 3D-C (Forward Scattering)': {
-            'folder': 'Results_3D_CaseC',
+            'folder': ARCHIVE_ROOT / 'Results_3D_CaseC',
             'color': 'green',
             'linestyle': '-.',
             'marker': '^'
@@ -100,8 +108,8 @@ def main():
     }
     
     # 创建输出目录
-    output_dir = 'Figures_3D'
-    os.makedirs(output_dir, exist_ok=True)
+    output_dir = ARCHIVE_ROOT / 'Figures_3D'
+    output_dir.mkdir(parents=True, exist_ok=True)
     
     # 实例化物理引擎 (OOP核心！)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -149,9 +157,9 @@ def main():
     ax.set_ylim(bottom=0)
     
     plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, 'G_along_centerline.png'), dpi=600)
-    plt.savefig(os.path.join(output_dir, 'G_along_centerline.pdf'))
-    print(f"  Saved: {output_dir}/G_along_centerline.png")
+    plt.savefig(output_dir / 'G_along_centerline.png', dpi=600)
+    plt.savefig(output_dir / 'G_along_centerline.pdf')
+    print(f"  Saved: {output_dir / 'G_along_centerline.png'}")
     plt.close()
     
     # Save 1D data to file
@@ -165,8 +173,8 @@ def main():
         if G is not None:
             case_key = case_name.replace(' ', '_').replace('(', '').replace(')', '')
             centerline_data[f'G_{case_key}'] = G
-    np.savez(os.path.join(output_dir, 'G_centerline_data.npz'), **centerline_data)
-    print(f"  Saved: {output_dir}/G_centerline_data.npz")
+    np.savez(output_dir / 'G_centerline_data.npz', **centerline_data)
+    print(f"  Saved: {output_dir / 'G_centerline_data.npz'}")
     
     # ========================================================================
     # 图2: 中心截面热图 (z=0.5)
@@ -206,9 +214,9 @@ def main():
     
     plt.suptitle(r'Incident Radiation at $z=0.5$ Plane', fontsize=13, y=1.02)
     plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, 'G_center_slice.png'), dpi=600, bbox_inches='tight')
-    plt.savefig(os.path.join(output_dir, 'G_center_slice.pdf'), bbox_inches='tight')
-    print(f"  Saved: {output_dir}/G_center_slice.png")
+    plt.savefig(output_dir / 'G_center_slice.png', dpi=600, bbox_inches='tight')
+    plt.savefig(output_dir / 'G_center_slice.pdf', bbox_inches='tight')
+    print(f"  Saved: {output_dir / 'G_center_slice.png'}")
     plt.close()
     
     # Save 2D slice data to file
@@ -226,8 +234,8 @@ def main():
             G_2d = G.reshape(n_grid, n_grid)
             case_key = case_name.replace(' ', '_').replace('(', '').replace(')', '')
             slice_data[f'G_{case_key}'] = G_2d
-    np.savez(os.path.join(output_dir, 'G_center_slice_data.npz'), **slice_data)
-    print(f"  Saved: {output_dir}/G_center_slice_data.npz")
+    np.savez(output_dir / 'G_center_slice_data.npz', **slice_data)
+    print(f"  Saved: {output_dir / 'G_center_slice_data.npz'}")
     
     # ========================================================================
     # 图3: 3D 体渲染数据导出 (VTK格式，用于ParaView)
@@ -257,7 +265,7 @@ def main():
                 
                 # 保存VTK
                 case_short = case_name.replace(' ', '_').replace('(', '').replace(')', '')
-                vtk_path = os.path.join(output_dir, f'G_3D_{case_short}')
+                vtk_path = output_dir / f'G_3D_{case_short}'
                 gridToVTK(vtk_path, X_vtk, Y_vtk, Z_vtk, 
                          pointData={"G": G_vtk})
                 print(f"  Saved: {vtk_path}.vts")
@@ -267,7 +275,7 @@ def main():
     
     print("\n" + "="*70)
     print("All figures generated successfully!")
-    print(f"Output directory: {output_dir}/")
+    print(f"Output directory: {output_dir}")
     print("="*70)
 
 

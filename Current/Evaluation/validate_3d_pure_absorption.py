@@ -12,6 +12,7 @@ where S = Ib(r) = max(0, 1 - 2r)
 
 import os
 import sys
+from pathlib import Path
 import torch
 import numpy as np
 import matplotlib
@@ -33,13 +34,22 @@ rcParams['axes.titlesize'] = 13
 rcParams['legend.fontsize'] = 10
 
 # 添加项目路径
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-CORE_PATH = os.path.join(PROJECT_ROOT, 'Core')
+SCRIPT_PATH = Path(__file__).resolve()
+EVAL_DIR = SCRIPT_PATH.parent
+CURRENT_ROOT = EVAL_DIR.parent
+ARCHIVE_ROOT = CURRENT_ROOT.parent
+OUTPUT_DIR = ARCHIVE_ROOT / 'Artifacts' / 'Figures_3D_Validation'
 
-if PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, PROJECT_ROOT)
-if CORE_PATH not in sys.path:
-    sys.path.insert(0, CORE_PATH)
+for extra_path in (
+    ARCHIVE_ROOT,
+    ARCHIVE_ROOT / 'Archive_Compat_Code',
+    CURRENT_ROOT,
+    CURRENT_ROOT / 'Models',
+    CURRENT_ROOT / 'EquationModels',
+):
+    extra_path_str = str(extra_path)
+    if extra_path_str not in sys.path:
+        sys.path.insert(0, extra_path_str)
 
 import ModelClassTorch2
 from ModelClassTorch2 import Pinns
@@ -174,6 +184,14 @@ def load_pinn_G(model_path, x_tensor, y_tensor, z_tensor, engine):
     
     return G_tensor.cpu().numpy()
 
+
+def resolve_archive_path(path_like):
+    """Resolve a path relative to the archive root."""
+    path = Path(path_like)
+    if not path.is_absolute():
+        path = ARCHIVE_ROOT / path
+    return path
+
 # ==========================================
 # 主程序
 # ==========================================
@@ -192,8 +210,9 @@ def plot_G_comparison(model_path="Results_3D_CaseA/model.pkl"):
     
     exact_solver = ExactGSolver(n_theta=16, n_phi=32)
     
-    output_dir = 'Figures_3D_Validation'
-    os.makedirs(output_dir, exist_ok=True)
+    output_dir = OUTPUT_DIR
+    output_dir.mkdir(parents=True, exist_ok=True)
+    model_path = resolve_archive_path(model_path)
     
     # ==========================================
     # 图1: 中心线 G(x) 对比
@@ -208,7 +227,7 @@ def plot_G_comparison(model_path="Results_3D_CaseA/model.pkl"):
     print("  Computing exact G(x)...")
     G_exact_line = exact_solver.compute_G_field(x_line, y_line, z_line, verbose=True)
     
-    if os.path.exists(model_path):
+    if model_path.exists():
         print("  Computing PINN G(x)...")
         x_line_t = torch.tensor(x_line, dtype=torch.float32, device=device)
         y_line_t = torch.tensor(y_line, dtype=torch.float32, device=device)
@@ -247,9 +266,9 @@ def plot_G_comparison(model_path="Results_3D_CaseA/model.pkl"):
     ax.set_ylim(bottom=0)
     
     plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, 'G_CaseA_Centerline_HighPrecision.png'), dpi=600)
-    plt.savefig(os.path.join(output_dir, 'G_CaseA_Centerline_HighPrecision.pdf'))
-    print(f"  Saved: {output_dir}/G_CaseA_Centerline_HighPrecision.png")
+    plt.savefig(output_dir / 'G_CaseA_Centerline_HighPrecision.png', dpi=600)
+    plt.savefig(output_dir / 'G_CaseA_Centerline_HighPrecision.pdf')
+    print(f"  Saved: {output_dir / 'G_CaseA_Centerline_HighPrecision.png'}")
     plt.close()
     
     # Save 1D validation data
@@ -262,8 +281,8 @@ def plot_G_comparison(model_path="Results_3D_CaseA/model.pkl"):
         'kappa': KAPPA,
         'case': '3D_A_PureAbsorption'
     }
-    np.savez(os.path.join(output_dir, 'G_CaseA_Centerline_Data.npz'), **validation_1d)
-    print(f"  Saved: {output_dir}/G_CaseA_Centerline_Data.npz")
+    np.savez(output_dir / 'G_CaseA_Centerline_Data.npz', **validation_1d)
+    print(f"  Saved: {output_dir / 'G_CaseA_Centerline_Data.npz'}")
     
     # ==========================================
     # 图2: 2D 中心截面 (z=0.5) 对比 - 风格与 plot_3d_paper_figures 热图一致
@@ -332,9 +351,9 @@ def plot_G_comparison(model_path="Results_3D_CaseA/model.pkl"):
     
     plt.suptitle(r'Incident Radiation at $z=0.5$ Plane', fontsize=13, y=1.02)
     plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, 'G_CaseA_2D_HighPrecision.png'), dpi=600, bbox_inches='tight')
-    plt.savefig(os.path.join(output_dir, 'G_CaseA_2D_HighPrecision.pdf'), bbox_inches='tight')
-    print(f"  Saved: {output_dir}/G_CaseA_2D_HighPrecision.png")
+    plt.savefig(output_dir / 'G_CaseA_2D_HighPrecision.png', dpi=600, bbox_inches='tight')
+    plt.savefig(output_dir / 'G_CaseA_2D_HighPrecision.pdf', bbox_inches='tight')
+    print(f"  Saved: {output_dir / 'G_CaseA_2D_HighPrecision.png'}")
     plt.close()
     
     # Save 2D validation data
@@ -348,8 +367,8 @@ def plot_G_comparison(model_path="Results_3D_CaseA/model.pkl"):
         'kappa': KAPPA,
         'case': '3D_A_PureAbsorption'
     }
-    np.savez(os.path.join(output_dir, 'G_CaseA_2D_Data.npz'), **validation_2d)
-    print(f"  Saved: {output_dir}/G_CaseA_2D_Data.npz")
+    np.savez(output_dir / 'G_CaseA_2D_Data.npz', **validation_2d)
+    print(f"  Saved: {output_dir / 'G_CaseA_2D_Data.npz'}")
     
     print(f"\n  2D Error Statistics:")
     print(f"  Max Error: {Error_2d.max():.4e}")
@@ -357,7 +376,7 @@ def plot_G_comparison(model_path="Results_3D_CaseA/model.pkl"):
     
     print("\n" + "="*70)
     print("Validation Complete!")
-    print(f"Output: {output_dir}/")
+    print(f"Output: {output_dir}")
     print("="*70)
 
 if __name__ == "__main__":

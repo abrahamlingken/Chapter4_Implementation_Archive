@@ -21,19 +21,27 @@ import json
 import time
 import math
 import argparse
+from pathlib import Path
 
 # ========================================================================
 # Path setup (must be before other imports)
 # ========================================================================
 
-# Calculate PROJECT_ROOT (we are now in Training/ subdirectory)
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, PROJECT_ROOT)
+SCRIPT_PATH = Path(__file__).resolve()
+TRAINING_DIR = SCRIPT_PATH.parent
+CURRENT_ROOT = TRAINING_DIR.parent
+ARCHIVE_ROOT = CURRENT_ROOT.parent
 
-CORE_PATH = os.path.join(PROJECT_ROOT, 'Core')
-if CORE_PATH not in sys.path:
-    sys.path.insert(0, CORE_PATH)
+for extra_path in (
+    ARCHIVE_ROOT,
+    ARCHIVE_ROOT / "Archive_Compat_Code",
+    CURRENT_ROOT,
+    CURRENT_ROOT / "Models",
+    CURRENT_ROOT / "EquationModels",
+):
+    extra_path_str = str(extra_path)
+    if extra_path_str not in sys.path:
+        sys.path.insert(0, extra_path_str)
 
 # 现在可以安全导入项目模块
 import torch
@@ -97,7 +105,7 @@ def train_single_case(case_key, chunk_size=4096,
     from EquationModels.RadTrans3D_Complex import RadTrans3D_Physics
     
     config = CASE_CONFIGS[case_key]
-    folder_path = os.path.join(PROJECT_ROOT, config['folder'])
+    folder_path = ARCHIVE_ROOT / config['folder']
     
     print(f"\n{'='*70}")
     print(f"Training {case_key}: {config['name']}")
@@ -105,10 +113,10 @@ def train_single_case(case_key, chunk_size=4096,
     print(f"  Description: {config['description']}")
     print(f"  Output folder: {folder_path}")
     
-    os.makedirs(folder_path, exist_ok=True)
+    folder_path.mkdir(parents=True, exist_ok=True)
     
     # 保存配置
-    with open(os.path.join(folder_path, "case_config.json"), 'w') as f:
+    with (folder_path / "case_config.json").open('w', encoding='utf-8') as f:
         json.dump({
             'case': case_key,
             'kappa': config['kappa'],
@@ -358,10 +366,10 @@ def train_single_case(case_key, chunk_size=4096,
     print(f"  Time: {training_time:.1f}s")
     
     # 保存模型
-    torch.save(model, os.path.join(folder_path, "model.pkl"))
+    torch.save(model, folder_path / "model.pkl")
     
     # 保存训练历史
-    with open(os.path.join(folder_path, "training_history.json"), 'w') as f:
+    with (folder_path / "training_history.json").open('w', encoding='utf-8') as f:
         json.dump(training_history, f, indent=2)
     
     # 保存训练信息
@@ -379,7 +387,7 @@ def train_single_case(case_key, chunk_size=4096,
         'activation': activation,
         'seed': seed
     }
-    with open(os.path.join(folder_path, "training_info.json"), 'w') as f:
+    with (folder_path / "training_info.json").open('w', encoding='utf-8') as f:
         json.dump(info, f, indent=2)
     
     # 保存训练曲线
@@ -423,8 +431,8 @@ def train_single_case(case_key, chunk_size=4096,
             axes[1, 1].grid(True, alpha=0.3)
         
         plt.tight_layout()
-        plt.savefig(os.path.join(folder_path, 'training_curves.png'), dpi=300)
-        print(f"  Saved: {folder_path}/training_curves.png")
+        plt.savefig(folder_path / 'training_curves.png', dpi=300)
+        print(f"  Saved: {folder_path / 'training_curves.png'}")
         
     except Exception as e:
         print(f"  Error generating figures: {e}")
@@ -474,7 +482,7 @@ def main():
     print("="*70)
     print("3D RTE Multi-Case Training Pipeline (OOP Version)")
     print("="*70)
-    print(f"Project Root: {PROJECT_ROOT}")
+    print(f"Archive Root: {ARCHIVE_ROOT}")
     print(f"Chunk Size: {args.chunk_size}")
     print(f"Cases: {args.case}")
     
@@ -521,10 +529,11 @@ def main():
         print(f"{r['case']:<10} {loss_str:<15} {iter_str:<12} {time_str:<10}")
     
     # 保存Summary
-    with open('training_summary_3d.json', 'w') as f:
+    summary_path = ARCHIVE_ROOT / 'training_summary_3d.json'
+    with summary_path.open('w', encoding='utf-8') as f:
         json.dump(results, f, indent=2)
-    
-    print(f"\nSummary saved to: training_summary_3d.json")
+
+    print(f"\nSummary saved to: {summary_path}")
     print("="*70)
 
 

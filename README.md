@@ -1,6 +1,25 @@
 # 第四章代码实现归档
 
-本目录用于集中整理硕士论文第四章“3D 稳态辐射传输方程 RTE 的 PINN 求解与验证”相关代码，便于后续查阅、复现实验、追溯图像来源与单独归档。
+本目录是硕士论文第四章“3D 稳态辐射传输方程 RTE 的 PINN 求解与验证”的独立归档版本。当前归档已经补齐兼容代码、最小训练结果和路径修复，能够脱离父目录工程，直接在本目录内重建 Chapter 4 的论文图。
+
+## 当前状态
+
+- 已完成独立归档
+- 可在本目录内独立运行 Chapter 4 主出图脚本
+- 兼容旧 `model.pkl` 的最小代码层已归档到 `Archive_Compat_Code/`
+- 最小必要训练结果已归档到 `Results_3D_CaseA/`、`Results_3D_CaseB/`、`Results_3D_CaseC/`
+
+独立重建命令：
+
+```bash
+python Current/Evaluation/generate_chapter4_thesis_figures.py --case ALL --outdir figures/chapter4_rebuild
+```
+
+独立归档修复说明见：
+
+- `ARCHIVE_INDEPENDENCE_NOTES.md`
+- `FIGURE_LINEAGE_AUDIT.md`
+- `FIGURE_LINEAGE_TABLE.csv`
 
 ## 目录结构
 
@@ -8,9 +27,17 @@
 Chapter4_Implementation_Archive/
 ├── README.md
 ├── ARCHITECTURE.md
+├── ARCHIVE_INDEPENDENCE_NOTES.md
+├── FIGURE_LINEAGE_AUDIT.md
+├── FIGURE_LINEAGE_TABLE.csv
+├── Archive_Compat_Code/
+│   ├── __init__.py
+│   ├── ImportFile.py
+│   └── ModelClassTorch2.py
 ├── Artifacts/
 │   ├── Figures_3D/
-│   └── Figures_3D_Validation/
+│   ├── Figures_3D_Validation/
+│   └── MC3D_Raw_Benchmarks/
 ├── Current/
 │   ├── README.md
 │   ├── CODE_LINEAGE.md
@@ -29,15 +56,36 @@ Chapter4_Implementation_Archive/
 │       └── MC/
 │           ├── FMC_3D_Solver_Fixed.py
 │           └── FMC_3D_Solver_Ultra.py
-└── Legacy_Figures3D/
-    └── plot_3d_paper_figures.py
+├── Legacy_Figures3D/
+│   └── plot_3d_paper_figures.py
+├── Results_3D_CaseA/
+├── Results_3D_CaseB/
+├── Results_3D_CaseC/
+└── figures/
+    ├── chapter4/
+    ├── chapter4_rebuild/
+    └── chapter4_verify_check/
 ```
 
-## 文件整理原则
+## 关键目录说明
 
-- `Artifacts/`：保存已生成的历史结果文件，便于直接查阅与打包。
-- `Current/`：保存当前第四章主线实现，覆盖训练、物理引擎、PINN 模型、验证脚本、论文图总控脚本与 FMC 求解器。
-- `Legacy_Figures3D/`：单独保存旧版 `plot_3d_paper_figures.py`，因为根目录 `Figures_3D/` 这一套历史结果实际由这份脚本生成，而不是当前 `Chapter4_3D_SteadyState/Evaluation/plot_3d_paper_figures.py` 生成。
+- `Archive_Compat_Code/`
+  - 归档内兼容层，用来替代父目录旧 `Core/` 结构中的最小必要代码。
+  - 重点解决旧 `model.pkl` 对 `ModelClassTorch2` / `ImportFile` 的依赖。
+- `Current/`
+  - 当前第四章主线实现，包含训练、物理引擎、评估和论文图生成脚本。
+- `Legacy_Figures3D/`
+  - 保存历史 `Figures_3D/` 结果对应的旧版绘图脚本。
+- `Results_3D_CaseA/`、`Results_3D_CaseB/`、`Results_3D_CaseC/`
+  - 归档内最小必要训练输出，包含 `model.pkl`、`training_history.json` 和 `case_config.json`。
+- `Artifacts/`
+  - 保存已归档的历史中间结果和基准数据。
+  - `Artifacts/Figures_3D_Validation/` 为 Case A 高精验证数据。
+  - `Artifacts/MC3D_Raw_Benchmarks/` 为 Case B/C 的 FMC 基准数据。
+- `figures/`
+  - 保存论文图输出。
+  - `figures/chapter4/` 是归档内已有的论文图集合。
+  - `figures/chapter4_rebuild/`、`figures/chapter4_verify_check/` 是独立归档验证过程中重建得到的输出。
 
 ## 关键用途
 
@@ -45,36 +93,43 @@ Chapter4_Implementation_Archive/
   - `Current/Training/train_3d_multicase.py`
 - 物理核心：
   - `Current/EquationModels/RadTrans3D_Complex.py`
-- PINN 网络定义：
+- 模型兼容入口：
   - `Current/Models/ModelClassTorch2.py`
+- 兼容实现主体：
+  - `Archive_Compat_Code/ModelClassTorch2.py`
 - Case A 高精验证：
   - `Current/Evaluation/validate_3d_pure_absorption.py`
 - Case B/C 与 FMC 对比：
   - `Current/Evaluation/validate_pinn_vs_fmc_fixed.py`
-- 第四章论文配图总控：
+- Chapter 4 论文图总控：
   - `Current/Evaluation/generate_chapter4_thesis_figures.py`
 - 历史 `Figures_3D/` 溯源脚本：
   - `Legacy_Figures3D/plot_3d_paper_figures.py`
 
-## 对应结果目录关系
+## 推荐使用方式
 
-- `Artifacts/Figures_3D/`
-  - 从根目录 `Figures_3D/` 复制而来
-- `Artifacts/Figures_3D_Validation/`
-  - 从根目录 `Figures_3D_Validation/` 复制而来
-- 根目录 `Figures_3D/`
-  - 对应 `Legacy_Figures3D/plot_3d_paper_figures.py`
-- 根目录 `Figures_3D_Validation/`
-  - 对应 `Current/Evaluation/validate_3d_pure_absorption.py`
-- `Chapter4_3D_SteadyState/Figures_Thesis/Chapter4/`
-  - 对应 `Current/Evaluation/generate_chapter4_thesis_figures.py`
+### 1. 重建 Chapter 4 论文图
 
-## 建议阅读顺序
+```bash
+python Current/Evaluation/generate_chapter4_thesis_figures.py --case ALL --outdir figures/chapter4_rebuild
+```
 
-1. 先看 `ARCHITECTURE.md`，理解模块层次与数据流。
-2. 再看 `Current/Training/train_3d_multicase.py`，明确模型与结果文件如何生成。
-3. 再看 `Current/EquationModels/RadTrans3D_Complex.py`，理解 `G(x,y,z)` 的计算方式。
-4. 最后按需求查看评估脚本：
-   - 纯吸收验证：`validate_3d_pure_absorption.py`
-   - FMC 对比：`validate_pinn_vs_fmc_fixed.py`
-   - 论文出图：`generate_chapter4_thesis_figures.py`
+### 2. 生成纯吸收验证图
+
+```bash
+python Current/Evaluation/validate_3d_pure_absorption.py
+```
+
+### 3. 重新训练 Case A/B/C
+
+```bash
+python Current/Training/train_3d_multicase.py --case A
+python Current/Training/train_3d_multicase.py --case B
+python Current/Training/train_3d_multicase.py --case C
+```
+
+## 重要说明
+
+- 本归档已经满足“独立重建 Chapter 4 论文图”的目标。
+- 当前兼容层是为归档复现服务的最小实现，不是父目录完整旧工程的全量迁移。
+- 如果后续继续扩展归档范围，应优先保持现有目录内自洽，不再引回父目录路径依赖。
